@@ -1,0 +1,29 @@
+int low = 0, high = n - 1;
+int ans = n;  // default
+
+while (low <= high) {
+    int mid = low + (high - low) / 2;
+
+    if (condition(mid)) {
+        ans = mid;
+        high = mid - 1;   // move LEFT
+    } else {
+        low = mid + 1;
+    }
+}
+
+return ans;
+
+👉 Use for:
+
+Lower Bound
+
+First Occurrence
+
+Search Insert Position
+
+Ceiling
+
+Rotated count
+
+Minimum in rotated array
